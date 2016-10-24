@@ -1,8 +1,6 @@
-import chai from 'chai'
-
-const titlecase = require('../index.js');
-const should = chai.should();
-const expect = chai.expect;
+import chai, { should, expect } from 'chai'
+require('./test-helper')
+import titlecase from '../index.js'
 
 describe('titlecase', () => {
   it('should pass this canary test', () => {
@@ -20,6 +18,12 @@ describe('titlecase', () => {
   it('should capitalize all words', () => {
     const testString = 'the quick brown fox'
     const expected = 'The Quick Brown Fox'
+    expect(testString.titlecase()).to.be.eql(expected)
+  })
+
+  it('should not capitalize a or the', () => {
+    const testString = 'the quick and brown fox'
+    const expected = 'The Quick and Brown Fox'
     expect(testString.titlecase()).to.be.eql(expected)
   })
 })

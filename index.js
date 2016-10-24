@@ -1,6 +1,9 @@
 String.prototype.titlecase = function () {
   const wordArray = this.split(' ')
+  const restrictedWords = ['a', 'the', 'an', 'and']
+  wordArray[0] = wordArray[0].capitalize()
   return wordArray.map(word => {
+    if(restrictedWords.includes(word)) return word
     return word.capitalize()
   }).join(' ')
 }
