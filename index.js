@@ -1,10 +1,12 @@
 String.prototype.titlecase = function () {
   const wordArray = this.split(' ')
-  const newString = wordArray.map(word => {
-    const charArray = word.split('')
-    charArray[0] = charArray[0].toUpperCase()
-    return charArray.join('')
+  return wordArray.map(word => {
+    return word.capitalize()
   }).join(' ')
+}
 
-  return newString
+String.prototype.capitalize = function () {
+  const charArray = this.split('')
+  charArray[0] = charArray[0].toUpperCase()
+  return charArray.join('')
 }
