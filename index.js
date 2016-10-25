@@ -9,7 +9,7 @@ String.prototype.titlecase = function () {
 }
 
 String.prototype.capitalize = function () {
-  const charArray = this.split('')
+  const charArray = this.toLowerCase().split('')
   charArray[0] = charArray[0].toUpperCase()
   return charArray.join('')
 }
