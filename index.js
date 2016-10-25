@@ -1,11 +1,13 @@
 String.prototype.titlecase = function () {
   const wordArray = this.split(' ')
   const restrictedWords = ['a', 'the', 'an', 'and']
-  wordArray[0] = wordArray[0].capitalize()
-  return wordArray.map(word => {
-    if(restrictedWords.includes(word)) return word
+  const newWordArray = wordArray.map(word => {
+    const downcaseWord = word.toLowerCase()
+    if(restrictedWords.includes(downcaseWord)) return downcaseWord
     return word.capitalize()
-  }).join(' ')
+  })
+  newWordArray[0] = newWordArray[0].capitalize()
+  return newWordArray.join(' ')
 }
 
 String.prototype.capitalize = function () {

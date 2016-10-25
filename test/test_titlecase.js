@@ -6,9 +6,11 @@ describe('titlecase', () => {
   it('should pass this canary test', () => {
     expect(true).to.be.true
   })
+
   it('should be callable on String', () => {
     expect(typeof 'stringy thingy'.titlecase).to.be.eql('function')
   })
+
   it('should capitalize a word', () => {
     const testString = 'the'
     const expected = 'The'
@@ -30,6 +32,12 @@ describe('titlecase', () => {
   it('should downcase all caps', () => {
     const testString = 'THE QUICK BROWN FOX'
     const expected = 'The Quick Brown Fox'
+    expect(testString.titlecase()).to.be.eql(expected)
+  })
+
+  it('should downcase partial caps', () => {
+    const testString = 'sHoRt AnD sToUt'
+    const expected = 'Short and Stout'
     expect(testString.titlecase()).to.be.eql(expected)
   })
 
