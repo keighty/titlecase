@@ -11,8 +11,8 @@ Proposed algorithm:
 
 TestCases
 ```javascript
-“I’m a little tea pot”.titlecase() should return a string.
-“I’m a little tea pot”.titlecase() should return “I’m A Little Tea Pot”.
-“sHoRt AnD sToUt”.titlecase() should return “Short And Stout”.
-“HERE IS MY HANDLE HERE IS MY SPOUT”.titlecase() should return “Here Is My Handle Here Is My Spout”.
+'I\'m a little tea pot'.titlecase() should return a string.
+'I\'m a little tea pot'.titlecase() should return “I’m a Little Tea Pot”.
+'sHoRt AnD sToUt'.titlecase() should return “Short and Stout”.
+'HERE IS MY HANDLE HERE IS MY SPOUT'.titlecase() should return “Here Is My Handle Here Is My Spout”.
 ```
