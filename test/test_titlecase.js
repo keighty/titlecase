@@ -1,5 +1,4 @@
 import chai, { should, expect } from 'chai'
-require('./test-helper')
 import titlecase from '../index.js'
 
 describe('titlecase', () => {
